@@ -4,16 +4,18 @@ import upload from '../libs/storage.js';
 
 const router = express.Router();
 
+router.get('/', methods.getMethod);
 
-router.get('/products/:id?', methods.getMethod);
+router.get('/:id', methods.getMethodOne);
 
-router.post('/products', upload.array('image', 4), methods.postMethod);
 
-router.delete('/products/:id', (req,res) => {
+router.post('/', upload.array('image', 4), methods.postMethod);
+
+router.delete('/:id', (req,res) => {
     res.send('delete')
 })
 
-router.put('/products/:id', (req,res)=>{
+router.put('/:id', (req,res)=>{
     res.send('Put');
 })
 

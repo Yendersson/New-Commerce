@@ -1,15 +1,18 @@
 import express from 'express';
+import routerIndex from './routes/index.js';
 import router from './routes/product.js';
 import routerAuth from './routes/auth.js';
 import conexion from './model/connection.js';
 import exphbs from 'express-handlebars'
+import logger from 'morgan'
+
 
 const app = express();
 
 app.engine('.hbs', exphbs.engine({ extname:'.hbs', defaultLayout:'main.hbs' }))
 app.set('view engine','.hbs')
 
-
+app.use(logger('dev'))
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
@@ -17,13 +20,9 @@ app.use(express.json());
 
 await conexion()
 
-app.get('/', (req,res)=>{
-
-    res.render('inicio', {title: 'Welcome to my page'});
-})
-
-app.use('/v2', router);
-app.use('/v2/user', routerAuth);
+app.use('/', routerIndex);
+app.use('/products', router);
+app.use('/user', routerAuth);
 
 // console.log(process.env)
 

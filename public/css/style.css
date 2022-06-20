@@ -105,7 +105,7 @@
   }
   
   body {
-    background: var(--white); 
+    background: var(--cultured); 
   }
   
   /* =================================== SCROLL-BAR STYLES =================================== */
@@ -694,6 +694,7 @@
     border: 1px solid var(--cultured);
     border-radius: var(--border-radius-md);
     scroll-snap-align: start;
+    background-color: white;
   }
   
   .category-img-box {
@@ -736,7 +737,7 @@
   /* ============================================================================================================== */
   
   .steps {
-    background-color: #EBEBEB;
+    background-color: white;
     max-width: auto;
     margin:2rem auto;
     padding:2rem;

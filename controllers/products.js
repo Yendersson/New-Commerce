@@ -2,21 +2,21 @@ import Product from '../model/model.js'
 
 const getMethod = async (req,res)=>{
 
+  const productos = await Product.find({}).lean();
+  console.log(productos);
+    res.render('productos', {products: productos})
+    
+}
 
+const getMethodOne = async(req,res)=>{
     let {id} = req.params;
 
-    if(id){
+    const producto = await Product.findOne({_id:id}).lean();
+    console.log(producto);
+    // res.json(producto);
+    res.render('productos_details', {details: producto});
 
-        const producto = await Product.findOne({_id:id});
-        console.log(producto);
-        res.json(producto)
 
-    }else{
-
-        const productos = await Product.find({});
-        console.log(productos);
-        res.json(productos)
-    }
 }
 
 const postMethod = async (req,res)=>{
@@ -57,5 +57,6 @@ const postMethod = async (req,res)=>{
 
 export default {
     getMethod,
+    getMethodOne,
     postMethod
 }
