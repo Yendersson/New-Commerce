@@ -4,7 +4,7 @@ const getMethod = async (req,res)=>{
 
   const productos = await Product.find({}).lean();
   console.log(productos);
-    res.render('productos', {products: productos})
+    res.render('productos', {products: productos, title: 'Todos los resultados'})
     
 }
 

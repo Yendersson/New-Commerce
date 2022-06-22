@@ -1,0 +1,1416 @@
+/* ================================================================================================================ */
+/* ================================================== MAIN ===================================================== */
+/* ============================================================================================================== */
+
+
+.intro_acerca {
+   width: 700px;  
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  align-items: center;
+  background-image: linear-gradient(#FF7D1B, #ffe11b);
+  position: relative;
+ 
+}
+
+.intro_acerca h1 {
+  padding-bottom: 30px;
+   font-size: 50px;
+} 
+
+.intro_acerca p {
+  width: 650px;
+  font-size: 25px;
+}
+
+.intro-2_acerca {
+  padding-top: 80px;
+}
+.img-1_acerca {
+  position: absolute;
+  top: 48%;
+  right: 70%;
+} 
+
+.img-1_acerca img {
+  width: 320px;
+  height: auto;
+}
+.img-2_acerca {
+  position: absolute;
+  top:36%;
+  left: 74%;
+}
+
+
+.img-2_acerca img {
+  width: 255px;
+  height: auto;
+}
+
+.main_acerca {
+background-color: white;
+color: rgb(51, 51, 51);
+align-items: center;
+margin: 0;
+
+
+}
+
+
+.intro_acerca {
+width: 100%;
+height: 730px; 
+
+text-align: center;
+
+}
+
+
+
+/* ---SECCIÓN PERFILES---*/
+
+
+.perfiles_acerca {
+  background-image: linear-gradient( #ffe11b, #FF7D1B);
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.container-perfiles_acerca {
+width: 85%;
+height: auto;
+display: grid;
+justify-content: center;
+align-items: center;
+grid-template-columns: auto auto auto;
+gap: 2% 10%;
+margin: 30px;
+}
+
+.perfil_acerca {
+width: 100%;
+height: auto;
+
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+}
+
+.imagen-perfil_acerca {
+
+
+border-radius: 50%;
+overflow: hidden;
+box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.75);
+transition: all 0.3s;
+width: 60%;
+
+}
+
+
+.imagen-perfil_acerca:hover {
+box-shadow: none;
+transition: all 0.3s;
+} 
+
+
+.imagen-perfil_acerca, .redes_acerca {
+margin: 10px;
+}
+.imagen-perfil_acerca img {
+width: 100%;
+height: auto;
+object-fit: cover;
+}
+
+
+.redes_acerca img {
+transition: all 0.3s;
+
+} 
+.redes_acerca img:hover {
+transition: all 0.3s;
+padding: 0;
+
+} 
+
+
+
+
+.redes_acerca {
+width: 50%;
+height: auto;
+display: flex;
+justify-content: space-around;
+margin-bottom: 25px;
+}
+
+
+
+
+/* ---SECCIÓN PESCAR-JP MORGAN---*/
+.section-pescar_acerca {
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 680px;
+background-color: white;
+
+
+}
+
+.section-pescar_acerca div {
+width: 85%;
+font-size: 25px;
+}
+
+.descrip-pescar_acerca {
+padding-top: 40px;
+}
+
+.logos_acerca {
+padding: 5px;
+transition: all 0.3s;
+height: auto;
+}
+.logos_acerca:hover {
+padding: 0;
+transition: all 0.3s;
+height: auto;
+}
+
+
+
+
+.section-flex-row_acerca {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+
+}
+
+/* ---SECCIÓN VISION---*/
+
+.vision_acerca {
+width: 100%;
+height: 680px;
+
+
+display: flex;
+
+}
+
+.vision-1_acerca {
+display: flex;
+flex-direction: row;
+}
+
+.vision-2_acerca {
+display: flex;
+flex-direction: row;
+}
+
+
+
+
+
+
+
+
+
+
+.vision_acerca div {
+
+width: auto;
+height: 600px;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+
+.vision-gradient_acerca {
+background-image: linear-gradient(#FF7D1B, #ffe11b);
+width: 633px;
+height: 390px;
+}
+.vision_acerca h2 {
+font-size: 50px;
+padding-bottom: 15px;
+font-weight: 600;
+
+}
+
+.vision_acerca p {
+margin: 0px 50px 0px 50px; 
+font-size: 25px;
+}
+
+.fondo-1_acerca {
+background-image: url(/images/img-acerca/children.jpg); 
+background-size: cover;
+background-position: 0px -15px;
+width: 633px;
+height: 390px;
+}
+
+.fondo-2_acerca {
+background-image: url(/images/img-acerca/notebook.jpg);
+background-size: cover;
+background-position: 0px -25px;
+}
+
+
+
+
+.mision_acerca {
+width: 100%;
+height: 380px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: center;
+background-color: white;
+}
+
+.card_acerca {
+position: relative;
+
+font-weight: 300;
+
+text-align: center;
+
+
+}
+
+.card_acerca .face {
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+border-radius: 10px;
+overflow: hidden;
+transition: .5s;
+}
+
+.card_acerca .front {
+transform: perspective(600px) rotateY(0deg);
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.464) ;
+background-image: linear-gradient( #ffe11b, #FF7D1B);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.card_acerca .front h3 {
+position: absolute;
+
+
+}
+
+.card_acerca .back {
+transform: perspective(600px) rotateY(180deg);
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.464) ;
+padding: 20px;
+
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgb(249, 249, 249)
+
+}
+
+
+.card_acerca:hover .front {
+transform: perspective(600px) rotateY(180deg);
+transition: all 0.7s;
+}
+.card_acerca:hover .back {
+transform: perspective(600px) rotateY(360deg);
+transition: all 0.7s;
+}
+
+
+
+/* ================================================================================================================ */
+/* ================================================== RESPONSIVE ================================================= */
+/* ============================================================================================================== */
+
+
+
+/* =================================== RESPONSIVE FOR SCREENS LARGER THAN 360PX =================================== */
+
+@media (min-width: 360px) {
+
+.container-perfiles_acerca {
+  grid-template-columns: auto;
+  gap: 0% 0%; 
+}
+
+.perfil_acerca {
+  width: 300px;
+height: auto;
+margin:10px;
+}
+.container-perfiles_acerca h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.redes_acerca img {
+  width: 40px;
+  height: auto;
+ padding: 5px;
+
+} 
+
+.redes_acerca img:hover {
+  width: 40px;
+  
+ 
+} 
+.imagen-perfil_acerca {
+    width: 50%;
+}
+
+
+.vision_acerca {
+  height: auto;
+}
+.vision_acerca div {
+
+  width: auto;
+  height: 600px;
+
+}
+.vision_acerca p {
+  font-size: 12px;
+  margin: 0px 20px 0px 20px;
+}
+.vision_acerca h2 {
+  font-size: 22px;
+}
+
+
+
+.fondo-1_acerca {
+ 
+  background-position: 296px 0px;
+
+}
+
+.fondo-2_acerca {
+ 
+  background-position: -113px 0px;
+}
+
+
+
+
+
+.section-pescar_acerca p {
+  font-size: 13px;
+}
+
+.logo-pescar_acerca {
+  width: 190px;
+}
+.logo-pescar_acerca:hover {
+  width: 200px;
+}
+.logo-jp_acerca {
+  width: 186px;
+}
+.logo-jp_acerca:hover {
+  width: 186px;
+}
+.logo-loma_acerca {
+  width: 85px;
+}
+.logo-loma_acerca:hover {
+  width: 85px;
+}
+.logo-mecenazgo_acerca {
+  width: 70px;
+ 
+}
+.logo-mecenazgo_acerca:hover {
+  width: 70px;
+  
+}
+
+
+
+
+.intro_acerca {
+  display:inline-block;
+  height: auto;
+}
+.intro_acerca p {
+  font-size: 13px;
+  width: 85%;
+  padding: 5px;
+  margin: 0 auto;
+}
+.intro_acerca h1 {
+  font-size: 33px;
+}
+
+
+.img-1_acerca {
+  top: 48%;
+  right: 38%;
+} 
+
+.img-1_acerca img {
+  width: 221px;
+
+}
+.img-2_acerca {
+  top:71%;
+  left: 60%;
+}
+
+
+.img-2_acerca img {
+  width: 140px;
+
+}
+
+.intro-2_acerca p {
+  width: 55%;
+  margin: 5px 0 0 23px;
+}
+
+
+
+.mision_acerca {
+  flex-direction: column;
+  height: 730px;
+}
+
+
+
+
+
+
+.card_acerca {
+
+width: 180px;
+height: 200px;
+
+
+
+
+}
+.card_acerca p {
+font-size: 12px;
+
+}
+
+.card_acerca .back {
+
+padding: 15px;
+line-height: 15px;
+}
+.card_acerca .front h3 {
+
+font-size: 16px;
+
+}
+
+}
+
+
+/* =================================== RESPONSIVE FOR SCREENS LARGER THAN 480PX =================================== */
+@media (min-width: 480px) {
+
+.container-perfiles_acerca {
+  grid-template-columns: auto;
+}
+
+.perfil_acerca {
+  width: 300px;
+height: auto;
+}
+.container-perfiles_acerca h2 {
+  font-size: 18px;
+  
+}
+
+
+.imagen-perfil_acerca {
+    width: 50%;
+}
+
+
+
+.vision_acerca p {
+  font-size: 14px;
+  
+}
+.vision_acerca h2 {
+  font-size: 24px;
+}
+
+
+
+
+
+
+.intro_acerca {
+  display:inline-block;
+}
+.intro_acerca p {
+  font-size: 15px;
+  width: 85%;
+  margin: 0 auto;
+}
+.intro_acerca h1 {
+  font-size: 40px;
+}
+
+
+.img-1_acerca {
+  top: 48%;
+  right: 43%;
+} 
+
+.img-1_acerca img {
+  width: 273px;
+
+}
+.img-2_acerca {
+  top:64%;
+  left: 60%;
+}
+
+
+.img-2_acerca img {
+  width: 183px;
+
+}
+
+.intro-2_acerca p {
+  width: 55%;
+  margin: 27px 0 0 23px;
+}
+
+
+
+
+
+
+.section-pescar_acerca p {
+  font-size: 15px;
+}
+.logo-pescar_acerca {
+  width: 190px;
+}
+.logo-pescar_acerca:hover {
+  width: 198px;
+}
+.logo-jp_acerca {
+  width: 196px;
+}
+.logo-jp_acerca:hover {
+  width: 196px;
+}
+.logo-loma_acerca {
+  width: 95px;
+}
+.logo-loma_acerca:hover {
+  width: 95px;
+}
+.logo-mecenazgo_acerca {
+  width: 80px;
+ 
+}
+.logo-mecenazgo_acerca:hover {
+  width: 80px;
+
+}
+
+}
+
+
+
+
+/* =================================== RESPONSIVE FOR SCREENS LARGER THAN 570PX =================================== */
+
+@media (min-width: 570px) {
+
+.container-perfiles_acerca {
+  grid-template-columns: auto;
+  
+}
+  .container-perfiles_acerca h2 {
+      font-size: 20px;
+  
+  }
+
+.intro_acerca {
+  display:inline-block;
+  height: 670px;
+}
+.intro_acerca p {
+  font-size: 14px;
+  width: 85%;
+  padding: 5px;
+  margin: 0 auto;
+}
+.intro_acerca h1 {
+  font-size: 40px;
+}
+
+
+.img-1_acerca {
+  top: 45%;
+  right: 48%;
+} 
+
+.img-1_acerca img {
+  width: 273px;
+
+}
+.img-2_acerca {
+  top:58%;
+  left: 60%;
+}
+
+
+.img-2_acerca img {
+  width: 183px;
+
+}
+
+.intro-2_acerca p {
+  width: 55%;
+  margin: 27px 0 0 23px;
+}
+
+
+
+
+.fondo-1_acerca {
+ 
+  background-position: 358px 0px;
+
+}
+
+.fondo-2_acerca {
+ 
+  background-position: -60px 0px;
+}
+
+.vision_acerca p {
+  font-size: 14px;
+  
+}
+.vision_acerca h2 {
+  font-size: 25px;
+}
+
+  
+.card_acerca {
+
+width: 215px;
+height: 250px;
+
+margin: 30px;
+
+
+}
+.card_acerca p {
+font-size: 15px;
+
+}
+
+.card_acerca .back {
+
+padding: 15px;
+line-height: 15px;
+}
+.card_acerca .front h3 {
+
+font-size: 16px;
+
+}
+
+.mision_acerca {
+flex-direction: row;
+height: 620px;
+}
+
+
+
+.section-pescar_acerca p {
+font-size: 15px;
+}
+
+.logo-jp_acerca {
+width: 245px;
+}
+.logo-jp_acerca:hover {
+width: 245px;
+}
+.logo-loma_acerca {
+width: 110px;
+}
+.logo-loma_acerca:hover {
+width: 110px;
+}
+.logo-mecenazgo_acerca {
+width: 95px;
+
+}
+.logo-mecenazgo_acerca:hover {
+width: 95px;
+
+}
+
+}
+
+
+
+
+/* =================================== RESPONSIVE FOR SCREENS LARGER THAN 670PX =================================== */
+
+@media (min-width: 670px) {
+
+.imagen-perfil_acerca {
+  width: 55%;
+}
+
+.redes_acerca img {
+  width: 42px;
+  height: auto;
+ padding: 5px;
+
+} 
+
+.redes_acerca img:hover {
+  width: 42px;
+  
+ 
+} 
+.container-perfiles_acerca h2 {
+  font-size: 21px;
+
+}
+
+.intro_acerca {
+  display:inline-block;
+  height: 700px;
+}
+.intro_acerca p {
+  font-size: 17px;
+  width: 85%;
+  padding: 5px;
+  margin: 0 auto;
+}
+.intro_acerca h1 {
+  font-size: 43px;
+}
+
+
+.img-1_acerca {
+  top: 48%;
+  right: 53%;
+} 
+
+.img-1_acerca img {
+  width: 296px;
+
+}
+.img-2_acerca {
+  top:57%;
+  left: 69%;
+}
+
+
+.img-2_acerca img {
+  width: 204px;
+
+}
+
+.intro-2_acerca p {
+  width: 65%;
+  margin: 42px 0 0 23px;
+}
+
+
+.fondo-1_acerca {
+ 
+  background-position: 388px 0px;
+
+}
+
+.fondo-2_acerca {
+ 
+  background-position: -25px 0px;
+}
+
+.vision_acerca p {
+  font-size: 16px;
+  
+}
+.vision_acerca h2 {
+  font-size: 26px;
+}
+
+
+
+
+      
+.card_acerca {
+
+width: 225px;
+height: 275px;
+
+margin: 30px;
+
+
+}
+.card_acerca p {
+font-size: 16px;
+
+}
+
+.card_acerca .back {
+
+padding: 15px;
+line-height: 18px;
+}
+.card_acerca .front h3 {
+
+font-size: 18px;
+
+}
+
+.mision_acerca {
+
+height: 670px;
+}
+
+
+
+
+
+
+.section-pescar_acerca p {
+font-size: 17px;
+}
+.logo-pescar_acerca {
+width: 210px;
+}
+.logo-pescar_acerca:hover {
+width: 220px;
+}
+
+
+}
+
+
+/* =================================== RESPONSIVE FOR SCREENS LARGER THAN 768PX =================================== */
+
+@media (min-width: 768px) {
+
+.container-perfiles_acerca {
+  grid-template-columns: auto auto;
+  gap: 0% 10%; 
+}
+
+.container-perfiles_acerca h2 {
+  font-size: 22px;
+
+}
+.imagen-perfil_acerca {
+  width: 60%;
+}
+.redes_acerca img {
+  width: 44px;
+  height: auto;
+ padding: 5px;
+
+} 
+
+.redes_acerca img:hover {
+  width: 44px;
+  
+ 
+} 
+
+
+.vision_acerca div {
+
+  width: auto;
+  height: 680px;
+}
+.intro_acerca h1 {
+ padding-bottom: 30px;
+  font-size: 14px;
+} 
+
+.fondo-1_acerca {
+ 
+background-position: 0px 0px;
+
+}
+
+.fondo-2_acerca {
+
+background-position: 0px 0px;
+}
+
+.vision_acerca p {
+font-size: 18px;
+
+}
+.vision_acerca h2 {
+font-size: 28px;
+}
+
+
+
+
+
+
+.intro_acerca p {
+font-size: 18px;
+width: 85%;
+padding: 5px;
+margin: 0 auto;
+}
+.intro_acerca h1 {
+font-size: 45px;
+}
+
+
+.img-1_acerca {
+top: 48%;
+right: 54%;
+} 
+
+.img-1_acerca img {
+width: 326px;
+
+}
+.img-2_acerca {
+top:59%;
+left: 71%;
+}
+
+
+.img-2_acerca img {
+width: 214px;
+
+}
+
+.intro-2_acerca p {
+width: 68%;
+margin: 42px 0 0 23px;
+}
+
+
+
+.card_acerca {
+
+width: 215px;
+height: 310px;
+
+margin: 15px;
+
+
+}
+
+
+.card_acerca .back {
+
+padding: 15px;
+line-height: 20px;
+}
+
+
+.mision_acerca {
+
+height: 380px;
+}
+
+
+
+
+
+
+.section-pescar_acerca p {
+font-size: 18px;
+}
+.logo-pescar_acerca {
+width: 215px;
+}
+.logo-pescar_acerca:hover {
+width: 225px;
+}
+
+.logo-jp_acerca {
+width: 270px;
+}
+.logo-jp_acerca:hover {
+width: 270px;
+}
+.logo-loma_acerca {
+width: 120px;
+}
+.logo-loma_acerca:hover {
+width: 120px;
+}
+.logo-mecenazgo_acerca {
+width: 105px;
+
+}
+.logo-mecenazgo_acerca:hover {
+width: 105px;
+
+}
+}
+
+
+      
+
+
+
+
+
+/* =================================== RESPONSIVE FOR SCREENS LARGER THAN 1024PX =================================== */
+
+@media (min-width: 1024px) {
+
+  /* .main_acerca {
+    margin-top: -20px;
+    
+  } */
+
+
+.container-perfiles_acerca {
+  grid-template-columns: auto auto auto;
+  gap: 2% 2%;
+}
+
+
+
+ .intro_acerca h1 {
+     padding-bottom: 30px;
+      font-size: 50px;
+ } 
+
+
+
+.intro_acerca p {
+  font-size: 20px;
+  width: 70%;
+  padding: 5px;
+  margin: 0 auto;
+}
+.intro_acerca h1 {
+  font-size: 50px;
+}
+
+
+.img-1_acerca {
+  top: 48%;
+  right: 64%;
+} 
+
+.img-1_acerca img {
+  width: 321px;
+
+}
+.img-2_acerca {
+  top:38%;
+  left: 80%;
+}
+
+
+.img-2_acerca img {
+  width: 200px;
+
+}
+
+.intro-2_acerca p {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.fondo-1_acerca {
+ 
+  background-position: 100% 100%;
+
+}
+
+.fondo-2_acerca {
+ 
+  background-position: 100% 100%;
+}
+
+.vision_acerca p {
+  font-size: 20px;
+  
+}
+.vision_acerca h2 {
+  font-size: 30px;
+}
+
+
+.card_acerca {
+
+  width: 260px;
+ 
+}
+
+
+.card_acerca .back {
+
+
+  line-height: 22px;
+}
+
+.card_acerca p {
+font-size: 17px;
+
+}
+
+.card_acerca .front h3 {
+
+font-size: 20px;
+
+}
+
+
+.section-pescar_acerca p {
+font-size: 19px;
+}
+.logo-pescar_acerca {
+width: 225px;
+}
+.logo-pescar_acerca:hover {
+width: 235px;
+}
+
+.logo-jp_acerca {
+width: 280px;
+}
+.logo-jp_acerca:hover {
+width: 280px;
+}
+.logo-loma_acerca {
+width: 130px;
+}
+.logo-loma_acerca:hover {
+width: 130px;
+}
+.logo-mecenazgo_acerca {
+width: 115px;
+
+}
+.logo-mecenazgo_acerca:hover {
+width: 115px;
+
+}
+
+
+
+}
+
+
+
+
+
+/* =================================== RESPONSIVE FOR SCREENS LARGER THAN 1200PX =================================== */
+
+
+@media (min-width: 1200px) {
+
+.container-perfiles_acerca {
+  
+  gap: 1% 8%;
+}
+
+.container-perfiles_acerca h2 {
+  font-size: 22px;
+
+}
+.imagen-perfil_acerca {
+  width: 63%;
+}
+
+.redes_acerca img {
+  width: 46px;
+  height: auto;
+ padding: 5px;
+
+} 
+.redes_acerca img:hover {
+  width: 46px;
+  
+ 
+} 
+      .vision_acerca div {
+      width: auto;
+  }
+  
+
+
+  .section-pescar_acerca p {
+      
+      font-size: 20px;
+  }
+
+
+
+  .logo-pescar_acerca {
+      width: 250px;
+  }
+ 
+  .logo-pescar_acerca:hover {
+      width: 260px;
+  }
+  
+  .logo-jp_acerca {
+    
+      width: 335px;
+     
+      
+  }
+  .logo-jp_acerca:hover {
+      
+      width: 335px;
+  
+      
+  }
+
+
+  .logo-loma_acerca {
+      width: 140px;
+     
+    
+  }
+  
+  .logo-loma_acerca:hover {
+      width: 140px;
+      
+     
+  }
+  .logo-mecenazgo_acerca {
+      width: 125px;
+     
+  }
+  .logo-mecenazgo_acerca:hover {
+      width: 125px;
+     
+  }
+
+
+
+
+  .vision_acerca p {
+      font-size: 20px;
+      
+  }
+  .vision_acerca h2 {
+      font-size: 32px;
+  }
+  
+  .intro_acerca p {
+      width: 65%;
+      font-size: 20px;
+  }
+  
+  .img-1_acerca {
+      
+      top: 44%;
+      right: 69%;
+  } 
+  
+  .img-1_acerca img {
+      width: 333px;
+      height: auto;
+  }
+  .img-2_acerca {
+      
+      top:32%;
+      left: 78%;
+  }
+  
+  
+  .img-2_acerca img {
+      width: 240px;
+      height: auto;
+  }
+
+
+
+
+  
+.card_acerca {
+
+  width: 270px;
+ 
+}
+
+
+.card_acerca p {
+font-size: 18px;
+
+}
+
+.card_acerca .front h3 {
+
+font-size: 22px;
+
+}
+
+}   
+
+
+
+
+@media (min-width: 1370px) {
+
+.intro_acerca p {
+max-width: 800px;
+
+}
+
+.img-1_acerca {
+
+top: 44%;
+right: 69%;
+} 
+
+.img-1_acerca img {
+width: 333px;
+height: auto;
+}
+.img-2_acerca {
+
+top:32%;
+left: 78%;
+}
+
+
+.img-2_acerca img {
+width: 240px;
+height: auto;
+}
+
+}
