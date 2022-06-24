@@ -4,6 +4,8 @@ import router from './routes/product.js';
 import routerAuth from './routes/auth.js';
 import routerAbout from './routes/aboutUs.js';
 import routerCategory from './routes/category.js';
+import routerFaq from './routes/faq.js';
+import routerCarrito from './routes/carrito.js';
 import conexion from './model/connection.js';
 import exphbs from 'express-handlebars'
 import logger from 'morgan'
@@ -27,6 +29,8 @@ app.use('/category', routerCategory);
 app.use('/products', router);
 app.use('/user', routerAuth);
 app.use('/aboutUs', routerAbout);
+app.use('/faq', routerFaq)
+app.use('/carrito', routerCarrito);
 
 // console.log(process.env)
 

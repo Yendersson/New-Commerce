@@ -12,7 +12,7 @@ routerCategory.get('/hogar_muebles', categorias.hogar);
 
 routerCategory.get('/revista_arte', categorias.revistas);
 
-routerCategory.get('/product/:id?', methods.getMethodOne);
+// routerCategory.get('/product/:id?', methods.getMethodOne);
 
 
 export default routerCategory;
