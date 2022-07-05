@@ -83,7 +83,7 @@ btnIncio.style.display = 'none';
 btnLogin.addEventListener('click', (e)=>{
     e.preventDefault();
 
-    fetch("https://ncapirest.glitch.me//newcommerce/v1/user/login",{
+    fetch("http://localhost:8080/user/login",{
         method: 'POST',
         headers: {
         "Content-Type": "application/json"
@@ -95,11 +95,17 @@ btnLogin.addEventListener('click', (e)=>{
     })
     .then(res=>res.json())
     .then(data=>{
-        console.log(data)
+        // console.log(data)
         // console.log(data.usuario.name);
         if(data.error == null){
-            location.href = 'index.html';
-            localStorage.setItem('user', data.usuario.name);
+            console.log('id', data.others._id);
+            localStorage.setItem('_id', data.others._id);
+
+            console.log(data.accessToken);
+            document.cookie = `token=${data.accessToken}`;
+
+        //    location.href = '/';
+            // localStorage.setItem('user', data.usuario.name);
 
         }else{
             document.querySelector('#alerta').innerHTML = data.error
@@ -121,4 +127,36 @@ btnIncio.addEventListener('click', ()=>{
     formRegistro.style.display='none';
     btnIncio.style.display = 'none';
     btnRegistro.style.display = 'block';
+});
+
+
+let btnRegister = document.querySelector('#btn-register');
+
+
+
+btnRegister.addEventListener('click', (e)=>{
+    e.preventDefault();
+
+    fetch("https://ncapirest.glitch.me//newcommerce/v1/user/register",{
+        method: 'POST',
+        headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        name: formRegistro.name.value,
+        email: formRegistro.email.value,
+        password: formRegistro.password.value
+    })
+    })
+    .then(res=>res.json())
+    .then(data=>{
+
+        if(data.error = null){
+        console.log(data)
+        // console.log(data.usuario.name);
+        }else{
+            document.querySelector('#alerta').innerHTML = data.error
+        }
+    })
+
 })

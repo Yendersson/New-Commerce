@@ -8,7 +8,8 @@ import routerFaq from './routes/faq.js';
 import routerCarrito from './routes/carrito.js';
 import conexion from './model/connection.js';
 import exphbs from 'express-handlebars'
-import logger from 'morgan'
+import logger from 'morgan';
+import cookieParser from 'cookie-parser';
 
 
 const app = express();
@@ -24,6 +25,7 @@ app.use(express.json());
 
 await conexion()
 
+app.use(cookieParser())
 app.use('/', routerIndex);
 app.use('/category', routerCategory);
 app.use('/products', router);

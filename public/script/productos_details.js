@@ -27,3 +27,90 @@ imgP.addEventListener("click",
  function (){ 
   imgP.src = imgUno.src
 })
+
+//AGREGAR AL CARRITO
+
+// const carrito = localStorage.getItem('carrito');
+
+const btnAgregar = document.querySelector('#agregar');
+
+btnAgregar.addEventListener('click', ()=>{
+  // console.log('agregando producto a carrito');
+  console.log(location.pathname)
+  const url = location.pathname.split('/')[2];
+  console.log(url);
+  const userId = localStorage.getItem('_id');
+  console.log(userId);
+
+  let products = {
+    productId : url
+  }
+
+
+  fetch('http://localhost:8080/carrito',
+  {
+    method: 'POST',
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify ({
+      userId: userId,
+      products: products
+    })
+  }
+  )
+  .then(res=> res.json())
+  .then(data => {
+
+    if(data.exist){
+      console.log(data.exist)
+      console.log('ALL OK', data.data);
+
+      console.log('array', data.data.products);
+
+      const array = data.data.products;
+      array.push(products);
+
+    //   fetch('http://localhost:8080/carrito'+ userId,
+    //   {
+    //     method: 'PUT',
+    //     headers: {"Content-Type": "application/json"},
+    //     body: JSON.stringify ({
+    //     userId: userId,
+    //     products: products
+    // })      
+    //   }
+    //   )
+
+    fetch('http://localhost:8080/carrito/' + userId, {
+        method: 'PUT',
+        headers: {"Content-Type": "application/json"},
+         body: JSON.stringify({
+          products: array
+         })
+    })
+    .then(res=>res.json())
+    .then(respuesta => console.log('nuevo producto', respuesta));
+
+    }else{
+      console.log('carrito Creado');
+    }
+  });
+})
+
+// if(!carrito){
+//   fetch('link',{
+//     method: POST
+//     headers;
+//     body: idUser: localStorage.getItem('_id');
+//     products: [producto.id];
+//   })
+// }else{
+//   fetch('link' + carrito){
+//     fetch('link',{
+//       method: PUT
+//       headers;
+//       // body: idUser: localStorage.getItem('_id');
+//       products: [producto.id];
+//       products.push(producto.id);
+//     })
+//   }
+// }
