@@ -30,8 +30,6 @@ imgP.addEventListener("click",
 
 //AGREGAR AL CARRITO
 
-// const carrito = localStorage.getItem('carrito');
-
 const btnAgregar = document.querySelector('#agregar');
 
 btnAgregar.addEventListener('click', ()=>{
@@ -69,17 +67,6 @@ btnAgregar.addEventListener('click', ()=>{
       const array = data.data.products;
       array.push(products);
 
-    //   fetch('http://localhost:8080/carrito'+ userId,
-    //   {
-    //     method: 'PUT',
-    //     headers: {"Content-Type": "application/json"},
-    //     body: JSON.stringify ({
-    //     userId: userId,
-    //     products: products
-    // })      
-    //   }
-    //   )
-
     fetch('http://localhost:8080/carrito/' + userId, {
         method: 'PUT',
         headers: {"Content-Type": "application/json"},
@@ -91,26 +78,7 @@ btnAgregar.addEventListener('click', ()=>{
     .then(respuesta => console.log('nuevo producto', respuesta));
 
     }else{
-      console.log('carrito Creado');
+      console.log('carrito no existente');
     }
   });
 })
-
-// if(!carrito){
-//   fetch('link',{
-//     method: POST
-//     headers;
-//     body: idUser: localStorage.getItem('_id');
-//     products: [producto.id];
-//   })
-// }else{
-//   fetch('link' + carrito){
-//     fetch('link',{
-//       method: PUT
-//       headers;
-//       // body: idUser: localStorage.getItem('_id');
-//       products: [producto.id];
-//       products.push(producto.id);
-//     })
-//   }
-// }

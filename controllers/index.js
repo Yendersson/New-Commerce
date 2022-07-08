@@ -1,5 +1,7 @@
 import Product from '../model/model.js'
 
+//___________SOLICITAR LA CANTIDAD DE PRODUCTOS POR CATEGORIA______________
+
 const getCantidadCategory = async (req,res)=>{
 
     const cantidadRopa = await Product.count({categoria:'ropa-accesorios'});

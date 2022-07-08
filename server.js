@@ -14,18 +14,24 @@ import cookieParser from 'cookie-parser';
 
 const app = express();
 
+
+// SETEADO DE HANDLEBARS 
 app.engine('.hbs', exphbs.engine({ extname:'.hbs', defaultLayout:'main.hbs' }))
 app.set('view engine','.hbs')
 
+//MORGAN
 app.use(logger('dev'))
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-
+//CONEXION A MONGOOSE
 await conexion()
 
+//COOKIES
 app.use(cookieParser())
+
+//RUTAS A UTILIZAR
 app.use('/', routerIndex);
 app.use('/category', routerCategory);
 app.use('/products', router);
@@ -35,7 +41,6 @@ app.use('/faq', routerFaq)
 app.use('/carrito', routerCarrito);
 
 // console.log(process.env)
-
 
 const PORT = process.env.PORT || 8080;
 

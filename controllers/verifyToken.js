@@ -1,5 +1,7 @@
 import JWT from "jsonwebtoken";
 
+//________________________AUTHENTICACION JWT___________
+
 const verifyToken = (req, res, next)=>{
     const authCookie = req.cookies.token;
     if(authCookie){

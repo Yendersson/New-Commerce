@@ -4,11 +4,13 @@ import upload from '../libs/storage.js';
 
 const router = express.Router();
 
+//OBTENEMNOS TODOS LOS PRODUCTOS
 router.get('/', methods.getMethod);
 
+//OBTENEMOS UN SOLO PRODUCTO MEDIANTE SU CLAVE
 router.get('/:id', methods.getMethodOne);
 
-
+//CREAMOS UN PRODUCTO Y CARGAMOS IMAGENES 
 router.post('/', upload.array('image', 4), methods.postMethod);
 
 router.delete('/:id', (req,res) => {

@@ -4,6 +4,7 @@ import methods from '../controllers/products.js'
 
 const routerCategory = express.Router();
 
+//PRODUCTOS POR CATEGORIAS
 routerCategory.get('/ropa_accesorios', categorias.ropaAccesorios);
 
 routerCategory.get('/electrodomesticos', categorias.electrodomesticos);

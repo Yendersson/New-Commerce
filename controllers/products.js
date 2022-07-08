@@ -1,5 +1,8 @@
 import Product from '../model/model.js'
 
+//_________________________CREACION DE SOLICITUDES DE PRODUCTOS
+
+//SOLICITAMOS TODOS LOS PRODUCTOS GET
 const getMethod = async (req,res)=>{
 
   const productos = await Product.find({}).lean();
@@ -7,6 +10,8 @@ const getMethod = async (req,res)=>{
     res.render('productos', {products: productos, title: 'Todos los resultados'})
     
 }
+
+//SOLICITAMOS UN SOLO PRODUCTO GET
 
 const getMethodOne = async(req,res)=>{
     let {id} = req.params;
@@ -18,6 +23,8 @@ const getMethodOne = async(req,res)=>{
 
 
 }
+
+//CREAMOS UN NUEVO PRODUCTO POST
 
 const postMethod = async (req,res)=>{
     const{
@@ -40,14 +47,9 @@ const postMethod = async (req,res)=>{
         usuario
     })
 
+    //CREACION DE ARCHIVOS "IMAGENES"
     if(req.files){
-        // const { filename }  = req.files;
         productoNuevo.setImgUrl(req.files);
-        // console.log(req.files)
-        // console.log(req.files[0])
-        // req.files.forEach(element => {
-        //     console.log(element.filename)
-        // });
     }
 
     const productoStoraged = productoNuevo.save();

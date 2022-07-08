@@ -1,13 +1,10 @@
 import Product from '../model/model.js';
 
+//_________BUSQUEDA DE PRODUCTOS MEDIANTE SUS CATEGORIAS____________
 const ropaAccesorios = async (req, res) =>{
     const productos = await Product.find({categoria:'ropa-accesorios'}).lean();
     console.log(productos);
 
-    // let title = {
-    //     category : 'ropa y accesorios'
-    // }
-    // console.log(title);
     res.render('productos', {title: 'Ropa y accesorios' , products: productos});
 }
 

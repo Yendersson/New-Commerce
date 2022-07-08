@@ -1,3 +1,4 @@
+
 // MOBILE MENU VARIABLES
 const mobileMenuOpenBtn = document.querySelectorAll('[data-mobile-menu-open-btn]');
 const mobileMenu = document.querySelectorAll('[data-mobile-menu]');
@@ -137,7 +138,7 @@ let btnRegister = document.querySelector('#btn-register');
 btnRegister.addEventListener('click', (e)=>{
     e.preventDefault();
 
-    fetch("https://ncapirest.glitch.me//newcommerce/v1/user/register",{
+    fetch("http://localhost:8080/user/register",{
         method: 'POST',
         headers: {
         "Content-Type": "application/json"
@@ -159,4 +160,15 @@ btnRegister.addEventListener('click', (e)=>{
         }
     })
 
+})
+
+//BOTOM CARRITO
+
+const _carrito = document.querySelector('#carrito')
+
+// console.log(idUser)
+
+_carrito.addEventListener('click', ()=>{
+    const idUser = localStorage.getItem('_id');
+    location.href = '/carrito/'+idUser
 })
