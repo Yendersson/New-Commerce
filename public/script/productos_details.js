@@ -29,6 +29,7 @@ imgP.addEventListener("click",
 })
 
 //AGREGAR AL CARRITO
+console.log(document.querySelectorAll('span'))
 
 const btnAgregar = document.querySelector('#agregar');
 
@@ -39,6 +40,8 @@ btnAgregar.addEventListener('click', ()=>{
   console.log(url);
   const userId = localStorage.getItem('_id');
   console.log(userId);
+
+
 
   let products = {
     productId : url
@@ -66,6 +69,16 @@ btnAgregar.addEventListener('click', ()=>{
 
       const array = data.data.products;
       array.push(products);
+      
+      localStorage.setItem('carrito', true);
+        const notificar = document.querySelectorAll('.count');
+
+        if(localStorage.getItem('carrito')){
+            notificar.forEach(elemento =>  {elemento.classList.add('notificar'); elemento.innerHTML = '!'});
+        }else{
+            notificar.forEach(elemento =>  {elemento.classList.remove('notificar'); elemento.innerHTML = '0'});
+            
+        }
 
     fetch('http://localhost:8080/carrito/' + userId, {
         method: 'PUT',
@@ -79,6 +92,16 @@ btnAgregar.addEventListener('click', ()=>{
 
     }else{
       console.log('carrito no existente');
+      localStorage.setItem('carrito', true);
+
+        const notificar = document.querySelectorAll('.count');
+
+        if(localStorage.getItem('carrito')){
+        notificar.forEach(elemento =>  {elemento.classList.add('notificar'); elemento.innerHTML = '!'});
+          }else{
+        notificar.forEach(elemento =>  {elemento.classList.remove('notificar'); elemento.innerHTML = '0'});
+        
+    }
     }
   });
 })

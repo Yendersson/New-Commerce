@@ -4,7 +4,7 @@ import JWT from "jsonwebtoken";
 
 const verifyToken = (req, res, next)=>{
     const authCookie = req.cookies.token;
-    if(authCookie){
+    if(authCookie !== ''){
         
         JWT.verify(authCookie, 'yender', (error, user)=>{
             if(error) res.status(401).json('Token is not valid');
@@ -16,4 +16,5 @@ const verifyToken = (req, res, next)=>{
     }
 }
 
-export default verifyToken
+export default 
+    verifyToken

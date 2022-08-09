@@ -1,4 +1,8 @@
 import Product from '../model/model.js'
+// import User from '../model/user.js'
+
+
+// let idUser = localStorage.getItem('_id');
 
 //_________________________CREACION DE SOLICITUDES DE PRODUCTOS
 
@@ -20,8 +24,7 @@ const getMethodOne = async(req,res)=>{
     console.log(producto);
     // res.json(producto);
     res.render('productos_details', {details: producto});
-
-
+    
 }
 
 //CREAMOS UN NUEVO PRODUCTO POST
@@ -34,7 +37,7 @@ const postMethod = async (req,res)=>{
         descripcion,
         estado,
         location,
-        usuario
+        usuario,
     } = req.body;
 
     const productoNuevo = new Product({
@@ -53,6 +56,9 @@ const postMethod = async (req,res)=>{
     }
 
     const productoStoraged = productoNuevo.save();
+
+    // const productoStoragedOnUser = await User.findOneAndUpdate({_id:idUser}, {selling})
+        
 
     res.json(productoStoraged);
 }

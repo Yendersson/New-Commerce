@@ -10,6 +10,7 @@ import conexion from './model/connection.js';
 import exphbs from 'express-handlebars'
 import logger from 'morgan';
 import cookieParser from 'cookie-parser';
+import routerUser from './routes/users.js';
 
 
 const app = express();
@@ -39,6 +40,7 @@ app.use('/user', routerAuth);
 app.use('/aboutUs', routerAbout);
 app.use('/faq', routerFaq)
 app.use('/carrito', routerCarrito);
+app.use('/profile', routerUser)
 
 // console.log(process.env)
 

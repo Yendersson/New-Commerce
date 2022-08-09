@@ -8,7 +8,8 @@ const ProducSchema = mongoose.Schema({
     imgUrl: Object,
     estado: Boolean,
     location: String,
-    usuario: String
+    usuario: String,
+    // userId: {type: String, require: true}
 },
 {
     timestamps:true

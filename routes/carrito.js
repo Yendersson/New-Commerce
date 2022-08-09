@@ -8,7 +8,7 @@ const routerCarrito = express.Router();
 
 
 //SOLICITAMOS INFORMACION DEL CARRITO DEL USUARIO MEDIAN SU ID Y AUTORIZAMOS MEDIANTE VERIFYTOKEN
-routerCarrito.get('/:find', verifyToken, async (req, res)=>{
+routerCarrito.get('/:find?', verifyToken, async (req, res)=>{
 
 
     let {find} = req.params;
@@ -17,6 +17,8 @@ routerCarrito.get('/:find', verifyToken, async (req, res)=>{
     const carrito = await Carrito.findOne({userId: find});
 
     console.log(carrito);
+
+    if(carrito !== null){
 
     //ITERAMOS Y CREAMOS UN ARRAY CON EL ID DE LOS PRODUCTOS CONTENIDOS EN EL CARRITO
     const allProducts = carrito.products.map(element => element.productId);
@@ -43,6 +45,10 @@ routerCarrito.get('/:find', verifyToken, async (req, res)=>{
 
     //AL RENDERIZAR LES MANDAMOS EL arrayDeSalida Y EL total PARA IMPRIMIRLOS MEDIANTE HANDLEBARS
     res.render('carrito', {carrito: arrayDeSalida, pagar: total})
+
+    }else{
+        res.render('carrito', {message: 'Debes escoger al menos un producto'})
+    }
 })
 
 

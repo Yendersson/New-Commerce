@@ -56,8 +56,16 @@ for (let i = 0; i < accordionBtn.length; i++) {
 let modal = document.querySelectorAll('.inicio');
 modal.forEach(boton =>{
     boton.addEventListener('click', ()=>{
-        document.querySelector('.modal').classList.add('modal-show');
-    })
+            // console.log(true)
+                if(localStorage.getItem('_id')){
+                    console.log(true)
+            document.querySelector('.modal-logeado').classList.add('modal-show');
+        }else{
+            // boton.addEventListener('click', ()=>{
+                document.querySelector('.modal').classList.add('modal-show');
+            }
+            })
+        // })  
 })
 
 
@@ -67,8 +75,28 @@ document.querySelector('#close').addEventListener('click', (e)=>{
 
 })
 
+document.querySelector('#close-logueado').addEventListener('click', (e)=>{
+    e.preventDefault();
+    document.querySelector('.modal-logeado').classList.remove('modal-show');
+
+})
+
 document.querySelector('#form').addEventListener('submit', (e)=>{
     e.preventDefault()
+})
+
+const btnProfile = document.querySelector('#btn-perfil');
+
+btnProfile.addEventListener('click',  _=>{
+        location.assign('/profile/' + localStorage.getItem('_id'));
+})
+
+const btnCloseSession = document.querySelector('#cerrar-sesion');
+
+btnCloseSession.addEventListener('click', _=>{
+    localStorage.removeItem('_id')
+    // document.cookie = 'token=; expires=Fri, 31 Dec 9999 23:59:59 GMT";'
+    location.assign('/')
 })
 
 /*****************************************FORM FUNCTION********************************************** */
@@ -102,11 +130,14 @@ btnLogin.addEventListener('click', (e)=>{
             console.log('id', data.others._id);
             localStorage.setItem('_id', data.others._id);
 
+            
             console.log(data.accessToken);
             document.cookie = `token=${data.accessToken}`;
-
-        //    location.href = '/';
+            
+            location.assign('/')
             // localStorage.setItem('user', data.usuario.name);
+
+
 
         }else{
             document.querySelector('#alerta').innerHTML = data.error
@@ -164,11 +195,21 @@ btnRegister.addEventListener('click', (e)=>{
 
 //BOTOM CARRITO
 
-const _carrito = document.querySelector('#carrito')
+const _carrito = document.querySelectorAll('.carrito')
 
 // console.log(idUser)
-
-_carrito.addEventListener('click', ()=>{
-    const idUser = localStorage.getItem('_id');
-    location.href = '/carrito/'+idUser
+_carrito.forEach(cart=>{
+    cart.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const idUser = localStorage.getItem('_id');
+        location.href = '/carrito/'+idUser     
+        
+    })
 })
+// _carrito.addEventListener('click', ()=>{
+//     const idUser = localStorage.getItem('_id');
+//     location.href = '/carrito/'+idUser
+// })
+
+//notificaion del carrito
+

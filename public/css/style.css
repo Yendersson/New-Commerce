@@ -1549,6 +1549,24 @@
   
   }
 
+  /* MODAL LOGEADO*/
+.modal-logeado{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  /* display: none; */
+  justify-content: center;
+  align-items: center;
+  background-color: #000000bd;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
   /******************************************************************MODAL  FORM*****************************************************************************/
 
   .modal{
@@ -1636,4 +1654,16 @@
 
 #close{
     color: var(--eerie-black);
+}
+
+#close-logueado{
+  color: var(--eerie-black);
+}
+
+
+
+/* NOTIFICAR CARRITO */
+.notificar{
+  background-color: red !important; 
+  color: white !important;
 }
