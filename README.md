@@ -5,10 +5,16 @@ Les presentamos el proyecto final de la capacitación como desarrolladores Web F
 
 link: https://new-commerce.glitch.me/
 
-Integrantes
+Integrantes:
+
 -Jonathan Ezequiel Veltri
+
 -Fabian Corsich
+
 -Yenderson Colmenares Rodriguez
+
 -Maura Zulema Dominguez Martinez
+
 -Pablo Rios
+
 -Celeste Dominguez
