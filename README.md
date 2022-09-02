@@ -9,6 +9,17 @@ Les presentamos el proyecto final de la capacitación como desarrolladores Web F
 
 link: https://new-commerce.glitch.me/
 
+Tech:
+HTML,
+CSS,
+Handlebars,
+JavaScript,
+MongoDB,
+Node.Js,
+Express.js.
+
+
+
 Integrantes:
 
 -Jonathan Ezequiel Veltri
